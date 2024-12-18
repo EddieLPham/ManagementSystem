@@ -35,8 +35,7 @@ providers, and appointments. The system will also allow users to assign appointm
 
 ## Purpose and Outcome
 
-## The goal of the project is to streamline appointment scheduling, manage provider availability,
-
+The goal of the project is to streamline appointment scheduling, manage provider availability,
 and allow users to maintain detailed records of appointments with corresponding prices.
 This system ensures better organization and efficiency in handling user and provider interactions.
 

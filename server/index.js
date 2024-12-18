@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const userController = require("./controller/userControllers");
 const bookingController = require("./controller/bookingController");
+const sessionController = require("./controller/sessionController");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -31,7 +32,7 @@ app.delete("/api/users/:userId", userController.deleteUser);
 //get all bookings
 app.get("/api/bookings", bookingController.getBookings);
 //get one booking
-app.get("/api/bookings/:bookingId", bookingController.getOneBookings);
+app.get("/api/bookings/:bookingId", bookingController.getOneBooking);
 //create new booking
 app.post("/api/bookings", bookingController.createBooking);
 //edit booking
@@ -40,6 +41,20 @@ app.put("/api/bookings/:bookingId", bookingController.updateBooking);
 app.delete("/api/bookings/:bookingId", bookingController.deleteBooking);
 //------------------------------------------------}
 //
+//
+//
+//Session Controller -----------------------------{
+//get all bookings
+app.get("/api/sessions", sessionController.getSessions);
+//get one booking
+app.get("/api/sessions/:bookingId", sessionController.getOneSession);
+//create new booking
+app.post("/api/sessions", sessionController.createSession);
+//edit booking
+app.put("/api/sessions/:sessionId", sessionController.updateSession);
+//delete a booking
+app.delete("/api/sessions/:sessionId", sessionController.deleteSession);
+//------------------------------------------------}
 //
 app.get("/", (resquest, response) => {
   response.send("Server is reading");

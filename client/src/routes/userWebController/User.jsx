@@ -20,49 +20,42 @@ function User() {
     fetchData();
   }, []);
   return (
-    <div className="h-4/6">
-      <h1 className="text-center text-3xl"> List of users</h1>
+    <div className="">
+      <h1 className=""> List of users</h1>
+      <Link to="/newuser">
+        <button className="">Add new employee</button>
+      </Link>
+
       <div>
-        <table className="table-auto border-spacing-2">
-          <thead>
-            <tr>
-              <th className="border border-slate-500 p-3"># </th>
-              <th className="border border-slate-500 p-3">Name </th>
-              <th className="border border-slate-500 p-3">Email </th>
-              <th className="border border-slate-500 p-3">Phone Number</th>
-              <th className="border border-slate-500 p-3">Role </th>
-              <th className="border border-slate-500 p-3">
-                <Link to="/newuser">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Add new employee
-                  </button>
-                </Link>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item) => {
-              return (
-                <tr key={item._id} className="border border-slate-500 p-3">
-                  <td className="border border-slate-500 p-3">
-                    {item._id.substring(0, 10)}
-                  </td>
-                  <td className="border border-slate-500 p-3">{item.name}</td>
-                  <td className="border border-slate-500 p-3">{item.email}</td>
-                  <td className="border border-slate-500 p-3">{item.phone}</td>
-                  <td className="border border-slate-500 p-3">{item.role}</td>
-                  <td className="border border-slate-500 p-4 text-center">
+        {data.map((item) => {
+          return (
+            <table className="">
+              <thead>
+                <tr>
+                  <th className=""># </th>
+                  <th className="">Name </th>
+                  <th className="">Email </th>
+                  <th className="">Phone Number</th>
+                  <th className="">Role </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr key={item._id} className="">
+                  <td className="">{item._id.substring(0, 10)}</td>
+                  <td className="">{item.name}</td>
+                  <td className="">{item.email}</td>
+                  <td className="">{item.phone}</td>
+                  <td className="">{item.role}</td>
+                  <td className=" text-center">
                     <Link to={`/user/${item._id}`}>
-                      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Edit
-                      </button>
+                      <button className="">Edit</button>
                     </Link>
                   </td>
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+          );
+        })}
       </div>
     </div>
   );

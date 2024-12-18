@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import "./HeaderFooter/HeaderFooter.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home.jsx";
 import Footer from "./HeaderFooter/Footer.jsx";
@@ -16,9 +17,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <div className=" container w-full p-2 flex h-screen ">
+        <div className="Container">
           <SideBar />
-          <div className="flex h-screen mx-auto w-screen items-center justify-center">
+          <div className="Page-Container">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/user" element={<User />} />

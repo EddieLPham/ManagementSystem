@@ -77,8 +77,8 @@ const ViewUser = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md w-1/3">
-      <h1 className="text-2xl font-bold mb-4">View User</h1>
+    <div className="">
+      <h1 className="">View User</h1>
       {submitted ? (
         <div>
           <h1>Data updated successfully!!</h1>

@@ -1,6 +1,7 @@
 const Booking = require("../model/Booking");
 const Users = require("../model/Users");
 
+// View bookings
 exports.getBookings = async (request, response) => {
   try {
     const booking = await Booking.find()
@@ -13,7 +14,8 @@ exports.getBookings = async (request, response) => {
   }
 };
 
-exports.getOneBookings = async (request, response) => {
+//View a single Booking
+exports.getOneBooking = async (request, response) => {
   try {
     const bookingId = request.params.bookingId;
     const booking = await Booking.findById(bookingId)
@@ -31,6 +33,7 @@ exports.getOneBookings = async (request, response) => {
   }
 };
 
+//Create new booking
 exports.createBooking = async (request, response) => {
   try {
     const { admin, customer, ticketPrice, appointmentDate, status, isPaid } =
@@ -51,6 +54,7 @@ exports.createBooking = async (request, response) => {
   }
 };
 
+//update a booking
 exports.updateBooking = async (request, response) => {
   try {
     const bookingId = request.params.bookingId;
@@ -73,6 +77,7 @@ exports.updateBooking = async (request, response) => {
   }
 };
 
+//delete a booking
 exports.deleteBooking = async (request, response) => {
   try {
     const booking = await Booking.findOneAndDelete(request.params.id);

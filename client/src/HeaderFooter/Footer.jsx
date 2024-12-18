@@ -1,4 +1,4 @@
 function Footer() {
-  return <footer className="mx-auto ">Copyright</footer>;
+  return <footer className="Footer">Copyright</footer>;
 }
 export default Footer;

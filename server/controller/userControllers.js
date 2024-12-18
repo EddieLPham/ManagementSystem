@@ -1,5 +1,6 @@
 const User = require("../model/Users");
 
+//view all users
 exports.getUsers = async (request, response) => {
   try {
     const user = await User.find();
@@ -10,6 +11,7 @@ exports.getUsers = async (request, response) => {
   }
 };
 
+//view a single user
 exports.getOneUser = async (request, response) => {
   try {
     const userId = request.params.userId;
@@ -27,6 +29,7 @@ exports.getOneUser = async (request, response) => {
   }
 };
 
+//create new user
 exports.createUser = async (request, response) => {
   try {
     const newUser = new User({
@@ -44,7 +47,7 @@ exports.createUser = async (request, response) => {
     response.status(500).send("Internal Server Error");
   }
 };
-
+//update a user
 exports.updateUser = async (request, response) => {
   try {
     const userId = request.params.userId; // Assuming you have the userId in the request parameters
@@ -69,6 +72,7 @@ exports.updateUser = async (request, response) => {
   }
 };
 
+//delete a user
 exports.deleteUser = async (request, response) => {
   try {
     const userId = request.params.userId;

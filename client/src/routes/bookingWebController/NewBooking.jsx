@@ -64,21 +64,19 @@ function NewBooking() {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md w-1/3">
-      <h2 className="text-2xl font-bold mb-4">Create Booking</h2>
+    <div className="">
+      <h2 className="">Create Booking</h2>
       {submitted ? (
         <h1>Created new booking Successfully</h1>
       ) : (
-        <form onSubmit={createBooking} className="space-y-4">
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-600">
-              Admin:
-            </label>
+        <form onSubmit={createBooking} className="">
+          <div className="">
+            <label className="">Admin:</label>
             <select
               name="admin"
               value={bookingData.admin}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className=""
             >
               {users
                 .filter((admin) => admin.role === "admin")
@@ -90,18 +88,15 @@ function NewBooking() {
             </select>
           </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="customer"
-              className="block text-sm font-medium text-gray-600"
-            >
+          <div className="">
+            <label htmlFor="customer" className="">
               User:
             </label>
             <select
               name="customer"
               value={bookingData.customer}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className=""
             >
               {users
                 .filter((customer) => customer.role === "customer")
@@ -113,11 +108,8 @@ function NewBooking() {
             </select>
           </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="ticketPrice"
-              className="block text-sm font-medium text-gray-600"
-            >
+          <div className="">
+            <label htmlFor="ticketPrice" className="">
               Ticket Price:
             </label>
             <input
@@ -125,15 +117,12 @@ function NewBooking() {
               name="ticketPrice"
               value={bookingData.ticketPrice}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className=""
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="appointmentDate"
-              className="block text-sm font-medium text-gray-600"
-            >
+            <label htmlFor="appointmentDate" className="">
               Appointment Date:
             </label>
             <input
@@ -141,32 +130,26 @@ function NewBooking() {
               name="appointmentDate"
               value={bookingData.appointmentDate}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className=""
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="status"
-              className="block text-sm font-medium text-gray-600"
-            >
+            <label htmlFor="status" className="">
               Status:
             </label>
             <select
               name="status"
               value={bookingData.status}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              className=""
             >
               <option value="pending">Pending</option>
             </select>
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="isPaid"
-              className="block text-sm font-medium text-gray-600"
-            >
+            <label htmlFor="isPaid" className="">
               Is Paid:
             </label>
             <input
@@ -182,10 +165,7 @@ function NewBooking() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-          >
+          <button type="submit" className="">
             Submit
           </button>
         </form>

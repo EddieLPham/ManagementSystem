@@ -1,0 +1,20 @@
+.Header {
+  padding: 1rem 0.5rem;
+  .header-tab {
+    padding: 0.25rem;
+  }
+}
+.Footer {
+  text-align: center;
+}
+.SideBar {
+  padding: 0 0.5rem;
+  .sidebar-list {
+    padding: 0.25rem;
+    .sidebar-link {
+      border: 0.5px solid black;
+      padding: 0.25rem 1rem 0.25rem 0.25rem;
+      margin: 0.5rem 0.25rem;
+    }
+  }
+}

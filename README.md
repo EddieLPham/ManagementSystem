@@ -7,6 +7,41 @@ I created a fully functional application using ReactJS for the front-end, Expres
 
 ---
 
+# Project Summary: Management System for Users, Providers, and Appointments
+
+## Purpose
+
+The purpose of this project is to develop a management system that allows users to perform CRUD (Create, Read, Update, Delete) operations on users,
+providers, and appointments. The system will also allow users to assign appointments to specific providers and manage the pricing for those appointments.
+
+---
+
+## Key Features
+
+- **User and Provider Management**:
+
+  - Users can be created, updated, and deleted.
+  - Providers can be added, modified, or removed from the system.
+
+- **Appointment Scheduling**:
+
+  - Users can schedule appointments with providers.
+  - Appointments will include pricing information for services rendered.
+
+- **Connecting Appointments with Providers**:
+  - Each appointment will be connected to a specific provider, ensuring accurate scheduling and service delivery.
+
+---
+
+## Purpose and Outcome
+
+## The goal of the project is to streamline appointment scheduling, manage provider availability,
+
+and allow users to maintain detailed records of appointments with corresponding prices.
+This system ensures better organization and efficiency in handling user and provider interactions.
+
+---
+
 ## Key Objectives
 
 ### 1. Learn API Development
